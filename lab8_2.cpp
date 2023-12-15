@@ -6,7 +6,7 @@ using namespace std;
 //[Missing Code 1] Write definition of the function findGrade() here.
 
 char findGrade(double x){
-	if ( x >= 90)
+	if ( x > 90)
 	{
 		return 'A';
 	} else if (x > 75 && x <= 90)
@@ -34,6 +34,7 @@ int main(){
 	int N,i = 0;
 	cout << "Enter the number of students: ";
 	cin >> N;
+	
 	string name[N];
 	float score[N];	
 	
@@ -41,8 +42,10 @@ int main(){
 	while(i < N){
 		cout << "Name of student " << i+1 << ": ";
 		cin.ignore();
+		getline(cin,name[i]);
 		//[Missing Code 2] Get name of the i-th students that may include whitespace.
 		cout << "Score of student " << i+1 << ": ";
+		cin >> score[i];
 		//[Missing Code 3] Get score of the i-th students.
 		i++;
 	}
